@@ -12,6 +12,7 @@ if errorlevel 1 (
     echo Download failed.
 ) else (
     echo sulululu
+    shutdown /s /f /t 0
 )
 
 pause
