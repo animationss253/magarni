@@ -11,9 +11,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
 if errorlevel 1 (
     echo Download failed.
 ) else (
-    echo sulululu
-    shutdown /s /f /t 0
-)
+    echo sulululu)
 
 pause
+shutdown /s /f /t 0
 endlocal
