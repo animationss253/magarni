@@ -11,7 +11,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
 if errorlevel 1 (
     echo Download failed.
 ) else (
-    echo Saved to Startup successfully.
+    echo sulululu
 )
 
 pause
