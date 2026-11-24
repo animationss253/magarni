@@ -1,6 +1,18 @@
 @echo off
-start "" "https://www.google.com/search?q=kopila+is+chor"
+title NEVER GONNA GIVE YOU UP
+color 0C
 
-timeout /t 5 /nobreak >nul
+echo.
+echo ========================================
+echo       YOU HAVE BEEN RICKROLLED!
+echo ========================================
+echo.
+echo Never gonna give you up...
+echo Never gonna let you down...
+echo.
+start "" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
+echo Your PC will shut down in 30 seconds...
+timeout /t 30 /nobreak
 
 shutdown /s /t 0
