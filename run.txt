@@ -1,18 +1,29 @@
 @echo off
-title NEVER GONNA GIVE YOU UP
-color 0C
+title MAGARNI PRANK
+color 0A
 
-echo.
-echo ========================================
-echo       YOU HAVE BEEN RICKROLLED!
-echo ========================================
-echo.
-echo Never gonna give you up...
-echo Never gonna let you down...
-echo.
+echo Starting prank...
+timeout /t 2 >nul
+
+powershell -NoProfile -Command ^
+"Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Magarni chor aalu muhehehehehe!','SYSTEM ALERT','OK','Warning')"
+
+powershell -NoProfile -Command ^
+"Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Your potato has been hacked. 🥔','SECURITY WARNING','OK','Error')"
+
+powershell -NoProfile -Command ^
+"Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('We know what you did last summer... MUHEHEHE!','MAGARNI INTELLIGENCE','OK','Information')"
+
+powershell -NoProfile -Command ^
+"Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('NEVER GONNA GIVE YOU UP!','FINAL WARNING','OK','Warning')"
+
 start "" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
-echo Your PC will shut down in 30 seconds...
-timeout /t 30 /nobreak
+echo.
+echo YOU HAVE BEEN RICKROLLED!
+echo Shutdown in 30 seconds.
+echo Run shutdown /a to cancel.
 
-shutdown /s /t 0
+shutdown /s /t 30
+
+pause
