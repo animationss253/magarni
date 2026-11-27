@@ -1,2 +1,2 @@
 @echo off
-msg * "hi"
+msg * "hjhi"
